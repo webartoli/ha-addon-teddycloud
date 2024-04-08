@@ -29,7 +29,7 @@ RUN ln -s /teddycloud/data /data \
 
 EXPOSE 80 443
 
-COPY --from=teddycloud docker/docker-entrypoint.sh /
+COPY --from=teddycloud /docker-entrypoint.sh /
 RUN chmod +rx /docker-entrypoint.sh
 CMD ["/docker-entrypoint.sh"]
 
