@@ -30,4 +30,4 @@ jobs:
           --${{ matrix.arch }} \
           --target teddycloud \
           --cosign \
-          --docker-hub ghcr.io/${{ github.actor }}
+          --docker-hub ghcr.io/${{ github.actor }}/ha-addons/teddycloud
