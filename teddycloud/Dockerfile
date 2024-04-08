@@ -18,14 +18,12 @@ RUN mkdir -p /teddycloud \
     && mkdir -p /config
 
 # Copy artifact from the teddycloud alpine image
-COPY --from=teddycloud /teddycloud /teddycloud
-COPY --from=teddycloud /usr/local/bin /usr/local/bin
-COPY --from=teddycloud /tmp /tmp
+COPY --from=teddycloud /teddycloud/ /teddycloud/
+COPY --from=teddycloud /usr/local/bin/ /usr/local/bin/
+COPY --from=teddycloud /tmp/ /tmp/
 
 # Create /data and /config volder to be mapped into HA as persitent volumes
-RUN ln -s /teddycloud/data /data \
-    && ln -s /teddycloud/certs /config/certs \
-    && ln -s /teddycloud/config /config/config
+RUN ln -s /teddycloud /data
 
 EXPOSE 80 443
 
