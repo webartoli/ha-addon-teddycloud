@@ -12,16 +12,14 @@ arch:
 - amd64
 - armv7
 
+ports:
+  443/tcp: 444
+
+ingress: true
+ingress_port: 80
+panel_icon: 'mdi:cube'
+
 options:
   log_level: 'info'
 schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
-
-ports:
-  80/tcp: 85
-  443/tcp: 444
-  
-webui: http://[HOST]:[PORT:80]/web
-
-panel_title: TeddyCloud
-panel_icon: 'mdi:cube'
