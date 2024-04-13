@@ -1,5 +1,6 @@
 name: Teddy Cloud
 version: 0.4.3
+stage: experimental
 slug: teddycloud
 description: Alternative server for your Toniebox, allowing you to host the cloud services locally
 url: https://github.com/webartoli/ha-addon-teddycloud
@@ -21,7 +22,6 @@ ports:
 
 ingress: true
 ingress_port: 80
-ingress_entry: /web
 panel_icon: 'mdi:cube'
 
 options:
