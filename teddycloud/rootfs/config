@@ -4,4 +4,4 @@ set -e
 
 config.d/01_addon
 config.d/02_hassio-mqtt || true
-jq -rf /config.d/scripts/to_ini.jq /data/config.json >> /teddycloud/config/config.overlay.ini
+jq -rf /config.d/scripts/to_ini.jq /data/options.json >> /teddycloud/config/config.overlay.ini
