@@ -31,9 +31,9 @@ RUN ln -s /teddycloud/data/content /data/content \
 
 EXPOSE 80 443
 
-COPY --from=teddycloud /docker-entrypoint.sh /
-RUN chmod +rx /docker-entrypoint.sh
-CMD ["/docker-entrypoint.sh"]
+COPY --from=teddycloud /docker-entrypoint.sh /run
+RUN chmod +rx /run
+CMD ["/run"]
 
 # Build arguments
 ARG BUILD_ARCH
