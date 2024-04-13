@@ -14,26 +14,21 @@ RUN update-ca-certificates
 # Create necessary directories
 RUN mkdir -p /teddycloud \
     && mkdir -p /usr/local/bin   \
-    && mkdir -p /tmp \
-    && mkdir -p /data
+    && mkdir -p /tmp
 
 # Copy artifact from the teddycloud alpine image
 COPY --from=teddycloud /teddycloud/ /teddycloud/
 COPY --from=teddycloud /usr/local/bin/ /usr/local/bin/
 COPY --from=teddycloud /tmp/ /tmp/
 
-# Create /data and /config volder to be mapped into HA as persitent volumes
-RUN ln -s /teddycloud/data/content /data/content \
- && ln -s /teddycloud/data/library /data/library \
- && ln -s /teddycloud/data/firmware /data/firmware \
- && ln -s /teddycloud/certs /data/certs \
- && ln -s /teddycloud/config /data/config
-
 EXPOSE 80 443
 
 COPY --from=teddycloud /docker-entrypoint.sh /run
 RUN chmod +rx /run
-CMD ["/run"]
+CMD ["/config", "&&", "/run"]
+
+# Copy root filesystem
+COPY rootfs /
 
 # Build arguments
 ARG BUILD_ARCH

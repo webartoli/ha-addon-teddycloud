@@ -1,0 +1,14 @@
+#!/usr/bin/with-contenv bashio
+
+set -e
+
+MQTT_HOST=$(bashio::services mqtt "host")
+MQTT_USER=$(bashio::services mqtt "username")
+MQTT_PASSWORD=$(bashio::services mqtt "password")
+
+CONFIG_FILE=/teddycloud/config/config.overlay.ini
+
+echo "mqtt.enabled=true" >> $CONFIG_FILE
+echo "mqtt.hostname=$MQTT_HOST" >> $CONFIG_FILE
+echo "mqtt.username=$MQTT_USER" >> $CONFIG_FILE
+echo "mqtt.password=$MQTT_PASSWORD" >> $CONFIG_FILE

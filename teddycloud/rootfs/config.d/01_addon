@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bashio
+
+mkdir -p  /data/teddycloud/content
+mkdir -p  /data/teddycloud/library
+mkdir -p  /data/teddycloud/firmware
+mkdir -p  /data/teddycloud/certs/client
+mkdir -p  /data/teddycloud/certs/server

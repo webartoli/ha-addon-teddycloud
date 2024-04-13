@@ -1,14 +1,9 @@
 ---
 configuration:
-  log_level:
+  log.level:
     name: Log level
     description: 0=off - 6=verbose
   
-  log_color:
+  log.color:
     name: Colored log
     
-  seconds_between_quotes:
-    name: Seconds between quotes
-    description: >-
-      The number of seconds the add-on waits until showing a new quote in the
-      add-on log.
