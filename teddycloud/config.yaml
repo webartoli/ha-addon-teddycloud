@@ -25,6 +25,8 @@ ingress_port: 80
 panel_icon: 'mdi:cube'
 
 options:
-  log_level: 'info'
+  log_level: 4
+  log_color: true
 schema:
-  log_level: list(trace|debug|info|notice|warning|error|fatal)?
+  log_level: int
+  log_color: bool

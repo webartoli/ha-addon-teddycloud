@@ -2,7 +2,11 @@
 configuration:
   log_level:
     name: Log level
-    description: The amount of logging the add-on should do.
+    description: 0=off - 6=verbose
+  
+  log_color:
+    name: Colored log
+    
   seconds_between_quotes:
     name: Seconds between quotes
     description: >-
