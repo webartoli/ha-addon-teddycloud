@@ -1,4 +1,4 @@
-#!/usr/bin/with-contenv bashio
+#!/usr/bin/env bash
 
 mkdir -p  /data/teddycloud/content
 mkdir -p  /data/teddycloud/library
