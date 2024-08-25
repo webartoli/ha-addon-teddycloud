@@ -28,5 +28,5 @@ options:
   log.level: 4
   log.color: true
 schema:
-  log.level: int
+  log.level: int(1,6)
   log.color: bool
