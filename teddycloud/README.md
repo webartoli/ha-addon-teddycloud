@@ -23,6 +23,8 @@ TeddyCloud is an alternative server for your Toniebox, allowing you to host the 
 This gives you the control about which data is sent to the original manufacturer's cloud and allows you
 to host your own figurine audio files on e.g. your NAS or any other server.
 
+The TeddyCloud add-on is based on the excellent [TeddyCloud](https://github.com/toniebox-reverse-engineering/teddycloud) project.
+
 ## License
 
 MIT License
@@ -53,7 +55,7 @@ SOFTWARE.
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [commits-shield]: https://img.shields.io/github/commit-activity/y/webartoli/ha-addon-teddycloud.svg
 [commits]: https://github.com/webartoli/ha-addon-teddycloud/commits/main
-[github-actions-shield]: https://github.com/webartoli/ha-addon-teddycloud/workflows/CI/badge.svg
+[github-actions-shield]: https://github.com/webartoli/ha-addon-teddycloud/actions/workflows/Publish.yml/badge.svg
 [github-actions]: https://github.com/webartoli/ha-addon-teddycloud/actions
 [i386-shield]: https://img.shields.io/badge/i386-no-red.svg
 [license-shield]: https://img.shields.io/github/license/webartoli/ha-addon-teddycloud.svg
