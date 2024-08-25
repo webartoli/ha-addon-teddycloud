@@ -21,7 +21,7 @@ COPY --from=teddycloud /teddycloud/ /teddycloud/
 COPY --from=teddycloud /usr/local/bin/ /usr/local/bin/
 COPY --from=teddycloud /tmp/ /tmp/
 
-EXPOSE 80 443
+EXPOSE 80 443 8443
 
 COPY --from=teddycloud --chmod=550 /docker-entrypoint.sh /
 CMD /config && /docker-entrypoint.sh
@@ -37,6 +37,15 @@ ARG BUILD_NAME
 ARG BUILD_REF
 ARG BUILD_REPOSITORY
 ARG BUILD_VERSION
+
+# Set up volumes
+VOLUME \
+    "/teddycloud/data/content" \
+    "/teddycloud/data/library" \
+    "/teddycloud/data/firmware" \
+    "/teddycloud/data/cache" \
+    "/teddycloud/certs" \
+    "/teddycloud/config"
 
 # Labels
 LABEL \
