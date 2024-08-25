@@ -1,5 +1,5 @@
 name: Teddy Cloud
-version: 0.4.3
+version: 0.6.0
 stage: experimental
 slug: teddycloud
 description: Alternative server for your Toniebox, allowing you to host the cloud services locally

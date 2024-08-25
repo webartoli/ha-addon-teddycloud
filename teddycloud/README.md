@@ -58,5 +58,5 @@ SOFTWARE.
 [i386-shield]: https://img.shields.io/badge/i386-no-red.svg
 [license-shield]: https://img.shields.io/github/license/webartoli/ha-addon-teddycloud.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2024.svg
-[releases-shield]: https://img.shields.io/badge/version-0.4.3-blue.svg
+[releases-shield]: https://img.shields.io/badge/version-0.6.0-blue.svg
 [releases]: https://github.com/webartoli/ha-addon-teddycloud/releases

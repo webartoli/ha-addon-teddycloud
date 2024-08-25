@@ -9,4 +9,4 @@ and this project reflects versions from Teddy Cloud original repository. ([Versi
 
 ### Added
 
-- Home Assistant Addon targeting Teddy Cloud [0.4.3](https://github.com/toniebox-reverse-engineering/teddycloud/releases/tag/tc_v0.4.3)
+- Home Assistant Addon targeting Teddy Cloud [0.6.0](https://github.com/toniebox-reverse-engineering/teddycloud/releases/tag/tc_v0.6.0)
