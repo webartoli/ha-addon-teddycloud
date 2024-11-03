@@ -9,13 +9,6 @@ init: false
 
 image: ghcr.io/webartoli/ha-addons/teddycloud/{arch}
 
-map:
-  - type: addon_config
-    read_only: False
-    path: /teddycloud/config
-  - type: data
-    path: /teddycloud/data
-
 arch:
   - aarch64
   - amd64
