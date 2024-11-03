@@ -1,16 +1,14 @@
-FROM node:alpine as web
+ARG TEDDYCLOUD_VERSION="0.6.2"
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:stable
 
+FROM node:alpine as web
 WORKDIR /app
 
 RUN apk --no-cache add git
-
 RUN git clone https://github.com/toniebox-reverse-engineering/teddycloud_web . \
  && rm .env* \
  && npm ci \
  && npm run build
-
-ARG TEDDYCLOUD_VERSION="0.6.2"
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:stable
 
 FROM ghcr.io/toniebox-reverse-engineering/teddycloud:${TEDDYCLOUD_VERSION}_alpine as teddycloud
 
