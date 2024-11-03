@@ -5,5 +5,5 @@ set -e
 for file in /ha-tc/config.d/*
 do
   echo "- Executing $file"
-  "$file"
+  . "$file"
 done
