@@ -12,6 +12,3 @@ echo core.server_cert.file.ca_der=/data/certs/server/ca.der >> $CONFIG_FILE
 echo core.server_cert.file.ca_key=/data/certs/server/ca-key.pem >> $CONFIG_FILE
 echo core.server_cert.file.crt=/data/certs/server/teddy-cert.pem >> $CONFIG_FILE
 echo core.server_cert.file.key=/data/certs/server/teddy-key.pem >> $CONFIG_FILE
-echo core.client_cert.file.ca=/data/certs/client/ca.der >> $CONFIG_FILE
-echo core.client_cert.file.crt=/data/certs/client/client.der >> $CONFIG_FILE
-echo core.client_cert.file.key=/data/certs/client/private.der >> $CONFIG_FILE
