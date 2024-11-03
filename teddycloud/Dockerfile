@@ -1,4 +1,4 @@
-ARG TEDDYCLOUD_VERSION="0.6.0"
+ARG TEDDYCLOUD_VERSION="0.6.2"
 ARG BUILD_FROM=ghcr.io/hassio-addons/base:stable
 
 FROM ghcr.io/toniebox-reverse-engineering/teddycloud:${TEDDYCLOUD_VERSION}_alpine as teddycloud
