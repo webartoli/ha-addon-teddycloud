@@ -29,7 +29,7 @@ ports:
   80/tcp: null
   443/tcp: 444
 
-ingress: true
+ingress: false
 ingress_port: 80
 ingress_entry: web
 
