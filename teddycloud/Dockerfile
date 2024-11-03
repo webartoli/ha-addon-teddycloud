@@ -24,7 +24,7 @@ COPY --from=teddycloud /tmp/ /tmp/
 EXPOSE 80 443 8443
 
 COPY --from=teddycloud --chmod=550 /docker-entrypoint.sh /
-CMD /config && /docker-entrypoint.sh
+CMD /ha-tc/init && /docker-entrypoint.sh
 
 # Copy root filesystem
 COPY rootfs /

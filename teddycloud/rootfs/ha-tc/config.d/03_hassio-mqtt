@@ -1,28 +1,27 @@
 #!/usr/bin/env bashio
 
+CONFIG_FILE=/teddycloud/config/config.overlay.ini
+
 if ! bashio::services.available "mqtt"; then
     bashio::log.info "No internal MQTT service found."
     exit 0
 fi
-
 
 bashio::log.info "MQTT service found, fetching server detail ..."
 if ! bashio::config.exists 'mqtt.hostname'; then
     bashio::log.info "MQTT server not found, auto-discovering ..."
     MQTT_HOST=$(bashio::services mqtt "host")
     bashio::log.info "Received host: '$MQTT_HOST' for MQTT!"
+
+    echo "mqtt.enabled=true" >> $CONFIG_FILE
+    echo "mqtt.hostname=$MQTT_HOST" >> $CONFIG_FILE
 fi
 if ! bashio::config.exists 'mqtt.username'; then
     bashio::log.info "MQTT credentials not found, auto-discovering ..."
     MQTT_USER=$(bashio::services mqtt "username")
     MQTT_PASSWORD=$(bashio::services mqtt "password")
     bashio::log.info "Received user: '$MQTT_USER' for MQTT!"
+
+    echo "mqtt.username=$MQTT_USER" >> $CONFIG_FILE
+    echo "mqtt.password=$MQTT_PASSWORD" >> $CONFIG_FILE
 fi
-
-
-CONFIG_FILE=/teddycloud/config/config.overlay.ini
-
-echo "mqtt.enabled=true" >> $CONFIG_FILE
-echo "mqtt.hostname=$MQTT_HOST" >> $CONFIG_FILE
-echo "mqtt.username=$MQTT_USER" >> $CONFIG_FILE
-echo "mqtt.password=$MQTT_PASSWORD" >> $CONFIG_FILE

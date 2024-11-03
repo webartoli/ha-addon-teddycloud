@@ -1,0 +1,5 @@
+#!/usr/bin/env bashio
+
+CONFIG_DIR=/teddycloud/config/
+
+jq -rf /ha-tc/scripts/to_ini.jq $CONFIG_DIR/options.json >> $CONFIG_DIR/config.overlay.ini

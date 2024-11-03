@@ -1,0 +1,16 @@
+#!/usr/bin/env bashio
+
+mkdir -p  /teddycloud/data/certs/client
+mkdir -p  /teddycloud/data/certs/server
+
+CONFIG_FILE=/teddycloud/config/config.overlay.ini
+
+echo core.certdir=/teddycloud/data/certs/client >> $CONFIG_FILE
+echo core.server_cert.file.ca=/teddycloud/data/certs/server/ca-root.pem >> $CONFIG_FILE
+echo core.server_cert.file.ca_der=/teddycloud/data/certs/server/ca.der >> $CONFIG_FILE
+echo core.server_cert.file.ca_key=/teddycloud/data/certs/server/ca-key.pem >> $CONFIG_FILE
+echo core.server_cert.file.crt=/teddycloud/data/certs/server/teddy-cert.pem >> $CONFIG_FILE
+echo core.server_cert.file.key=/teddycloud/data/certs/server/teddy-key.pem >> $CONFIG_FILE
+echo core.client_cert.file.ca=/teddycloud/data/certs/client/ca.der >> $CONFIG_FILE
+echo core.client_cert.file.crt=/teddycloud/data/certs/client/client.der >> $CONFIG_FILE
+echo core.client_cert.file.key=/teddycloud/data/certs/client/private.der >> $CONFIG_FILE
