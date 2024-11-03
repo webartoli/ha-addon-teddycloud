@@ -18,12 +18,12 @@ services:
   - mqtt:want
 
 ports:
-  80/tcp: null
+  80/tcp: 8889
   443/tcp: 444
 
-ingress: false
+ingress: true
 ingress_port: 80
-ingress_entry: web
+ingress_entry: legacy.html
 
 panel_icon: 'mdi:cube'
 

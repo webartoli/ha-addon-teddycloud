@@ -3,12 +3,12 @@
 
 CONFIG_FILE=/teddycloud/config/config.overlay.ini
 
-mkdir -p  /data/teddycloud/content
-mkdir -p  /data/teddycloud/library
-mkdir -p  /data/teddycloud/firmware
-mkdir -p  /data/teddycloud/cache
+mkdir -p  /data/content
+mkdir -p  /data/library
+mkdir -p  /data/firmware
+mkdir -p  /data/cache
 
-echo core.contentdir=/data/teddycloud/content >> $CONFIG_FILE
-echo core.librarydir=/data/teddycloud/library >> $CONFIG_FILE
-echo core.firmwaredir=/data/teddycloud/firmware >> $CONFIG_FILE
-echo core.cachedir=/data/teddycloud/cache >> $CONFIG_FILE
+echo core.contentdir=/data/content >> $CONFIG_FILE
+echo core.librarydir=/data/library >> $CONFIG_FILE
+echo core.firmwaredir=/data/firmware >> $CONFIG_FILE
+echo core.cachedir=/data/cache >> $CONFIG_FILE
