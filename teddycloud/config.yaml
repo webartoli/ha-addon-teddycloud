@@ -23,7 +23,6 @@ ports:
 
 ingress: true
 ingress_port: 80
-ingress_entry: legacy.html
 
 panel_icon: 'mdi:cube'
 

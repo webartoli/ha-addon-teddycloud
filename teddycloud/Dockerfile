@@ -1,3 +1,14 @@
+FROM node:alpine as web
+
+WORKDIR /app
+
+RUN apk --no-cache add git
+
+RUN git clone https://github.com/toniebox-reverse-engineering/teddycloud_web . \
+ && rm .env* \
+ && npm ci \
+ && npm run build
+
 ARG TEDDYCLOUD_VERSION="0.6.2"
 ARG BUILD_FROM=ghcr.io/hassio-addons/base:stable
 
@@ -20,6 +31,7 @@ RUN mkdir -p /teddycloud \
 COPY --from=teddycloud /teddycloud/ /teddycloud/
 COPY --from=teddycloud /usr/local/bin/ /usr/local/bin/
 COPY --from=teddycloud /tmp/ /tmp/
+COPY --from=web /app/dist/ /teddycloud/data/www/
 
 EXPOSE 80 443 8443
 
