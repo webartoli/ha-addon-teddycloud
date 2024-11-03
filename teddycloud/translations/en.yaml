@@ -7,3 +7,6 @@ configuration:
   log.color:
     name: Colored log
     
+network:
+  80/tcp: The webserver port (Not used for Ingress)
+  443/tcp: The Toniebox server (direct access for flashed Boxes)
