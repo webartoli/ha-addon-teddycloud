@@ -38,15 +38,6 @@ ARG BUILD_REF
 ARG BUILD_REPOSITORY
 ARG BUILD_VERSION
 
-# Set up volumes
-VOLUME \
-    "/teddycloud/data/content" \
-    "/teddycloud/data/library" \
-    "/teddycloud/data/firmware" \
-    "/teddycloud/data/cache" \
-    "/teddycloud/certs" \
-    "/teddycloud/config"
-
 # Labels
 LABEL \
     io.hass.name="${BUILD_NAME}" \
