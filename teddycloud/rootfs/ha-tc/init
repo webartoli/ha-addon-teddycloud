@@ -4,5 +4,6 @@ set -e
 
 for file in /ha-tc/config.d/*
 do
-  . "$file"
+  echo "- Executing $file"
+  "$file"
 done
